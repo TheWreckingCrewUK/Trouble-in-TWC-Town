@@ -1,0 +1,1 @@
+#include "TTT_core\onRespawn.sqf";
