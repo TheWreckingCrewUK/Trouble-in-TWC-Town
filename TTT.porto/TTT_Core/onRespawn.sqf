@@ -121,21 +121,18 @@ if ((servertime - twc_starttime) < 120) then {
 
 			 _text1 = ("<br /><t color='#FFFFFF' size='5' shadow='1' shadowColor='#000000' align='center'>3</t>");
 			_spawntext = parsetext (_title + _text1);
-			playSound "Beep_Strobe";
 			hint _spawntext;
 			sleep 1;
 			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TWC TOWN</t>";
 
 			 _text1 = ("<br /><t color='#FFFFFF' size='5' shadow='1' shadowColor='#000000' align='center'>2</t>");
 			_spawntext = parsetext (_title + _text1);
-			playSound "Beep_Strobe";
 			hint _spawntext;
 			sleep 1;
 			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TWC TOWN</t>";
 
 			 _text1 = ("<br /><t color='#FFFFFF' size='5' shadow='1' shadowColor='#000000' align='center'>1</t>");
 			_spawntext = parsetext (_title + _text1);
-			playSound "Beep_Strobe";
 			hint _spawntext;
 			
 			sleep 1;
