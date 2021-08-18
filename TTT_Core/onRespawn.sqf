@@ -96,7 +96,7 @@ if ((servertime - twc_starttime) < 120) then {
 			
 			if (_role == "det") then {
 				removeHeadgear player;
-				player addHeadgear "rhsgref_helmet_pasgt_un";
+				player addHeadgear "H_Cap_police";
 				for "_i" from 1 to 10 do {
 					player additem "ACE_fieldDressing";
 					player additem "ACE_morphine";
@@ -110,39 +110,36 @@ if ((servertime - twc_starttime) < 120) then {
 			player additem "SmokeShell";
 			player additem "SmokeShell";
 			
-			_guns = selectrandom [["rhs_weap_M590_5RD", "rhsusf_5Rnd_00Buck"], ["CUP_smg_MP5A5_flashlight", "CUP_30Rnd_9x19_MP5"], ["SMG_02_F", "30Rnd_9x21_Mag_SMG_02"], ["SMG_01_F", "30Rnd_45ACP_Mag_SMG_01"], ["hgun_Pistol_heavy_02_F", "6Rnd_45ACP_Cylinder"], ["rhs_weap_6p53", "rhs_18rnd_9x21mm_7N28"], ["UK3CB_BAF_L105A1", "UK3CB_BAF_9_15Rnd"], ["rhsusf_weap_glock17g4", "rhsusf_mag_17Rnd_9x19_FMJ"], ["CUP_hgun_Deagle", "CUP_7Rnd_50AE_Deagle"], ["rhsusf_weap_m1911a1", "rhsusf_mag_7x45acp_MHP"], ["rhs_weap_pya", "rhs_mag_9x19_17"], ["hgun_P07_F", "16Rnd_9x21_Mag"], ["rhs_weap_tt33", "rhs_mag_762x25_8"], ["UK3CB_BAF_L9A1", "UK3CB_BAF_9_13Rnd"], ["rhsusf_weap_m9", "rhsusf_mag_15Rnd_9x19_FMJ"], ["rhsusf_weap_m9", "rhsusf_mag_15Rnd_9x19_FMJ"], ["rhsusf_weap_m9", "rhsusf_mag_15Rnd_9x19_FMJ"], ["rhsusf_weap_m9", "rhsusf_mag_15Rnd_9x19_FMJ"], ["rhsusf_weap_m9", "rhsusf_mag_15Rnd_9x19_FMJ"]];
+			_guns = selectrandom [["CUP_smg_MP5A5_flashlight", "CUP_30Rnd_9x19_MP5"], ["SMG_02_F", "30Rnd_9x21_Mag_SMG_02"], ["SMG_01_F", "30Rnd_45ACP_Mag_SMG_01"], ["hgun_Pistol_heavy_02_F", "6Rnd_45ACP_Cylinder"], ["UK3CB_BAF_L105A1", "UK3CB_BAF_9_15Rnd"], ["CUP_hgun_Deagle", "CUP_7Rnd_50AE_Deagle"], ["hgun_P07_F", "16Rnd_9x21_Mag"], ["UK3CB_BAF_L9A1", "UK3CB_BAF_9_13Rnd"]];
 			
 			for "_i" from 1 to 20 do {
 				player additem (_guns select 1);
 			};
 			player addweapon (_guns select 0);
 			
-			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TERRORIST TOWN</t>";
+			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TWC TOWN</t>";
 
 			 _text1 = ("<br /><t color='#FFFFFF' size='5' shadow='1' shadowColor='#000000' align='center'>3</t>");
 			_spawntext = parsetext (_title + _text1);
 			playSound "Beep_Strobe";
 			hint _spawntext;
 			sleep 1;
-			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TERRORIST TOWN</t>";
+			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TWC TOWN</t>";
 
 			 _text1 = ("<br /><t color='#FFFFFF' size='5' shadow='1' shadowColor='#000000' align='center'>2</t>");
 			_spawntext = parsetext (_title + _text1);
 			playSound "Beep_Strobe";
 			hint _spawntext;
 			sleep 1;
-			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TERRORIST TOWN</t>";
+			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TWC TOWN</t>";
 
 			 _text1 = ("<br /><t color='#FFFFFF' size='5' shadow='1' shadowColor='#000000' align='center'>1</t>");
 			_spawntext = parsetext (_title + _text1);
 			playSound "Beep_Strobe";
 			hint _spawntext;
 			
-			sleep 0.9;
-			playSound "RHSUSF_M590_Pump";
-			playSound "RHSUSF_M590_Pump";
-			sleep 0.1;
-			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TERRORIST TOWN</t>";
+			sleep 1;
+			_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>TROUBLE IN TWC TOWN</t>";
 
 			_text1 = ("<br /><t color='#FFFFFF' size='5' shadow='1' shadowColor='#000000' align='center'>GO</t><br /><br /><br />");
 			 
@@ -178,7 +175,6 @@ if ((servertime - twc_starttime) < 120) then {
 			_spawntext = parsetext (_title + _text1 + _roletext);
 
 			hint _spawntext;
-			playSound "RHS_APS_Warning";
 			player allowdamage true;
 			
 			player addEventHandler ["Killed", {

@@ -67,7 +67,5 @@ player addEventHandler ["Fired", {
 #include "diary.sqf";
 #include "economy.sqf";
 
-
-//playSound "RHS_APS_Warning";
 //playSound "FD_Start_F";
 //playSound "Beep_Strobe"

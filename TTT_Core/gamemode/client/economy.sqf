@@ -28,10 +28,10 @@ twc_buy_pkm = {
 	};
 	player setvariable ["ttt_money", (_money - _cost), true];
 	player addbackpack "B_AssaultPack_sgg";
-	player additem "rhs_100Rnd_762x54mmR_green";
-	player additem "rhs_100Rnd_762x54mmR_green";
-	player additem "rhs_100Rnd_762x54mmR_green";
-	player addweapon "rhs_weap_pkm";
+	player additem "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M";
+	player additem "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M";
+	player additem "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M";
+	player addweapon "CUP_lmg_PKM";
 	
 	hint "You have bought a weapon";
 };
@@ -65,14 +65,14 @@ twc_buy_shield = {
 	};
 	player setvariable ["ttt_money", (_money - _cost), true];
 	player addbackpack "B_AssaultPack_sgg";
-	player additem "rhsusf_mag_15Rnd_9x19_FMJ";
-	player additem "rhsusf_mag_15Rnd_9x19_FMJ";
-	player additem "rhsusf_mag_15Rnd_9x19_FMJ";
-	player additem "rhsusf_mag_15Rnd_9x19_FMJ";
-	player additem "rhsusf_mag_15Rnd_9x19_FMJ";
-	player additem "rhsusf_mag_15Rnd_9x19_FMJ";
-	player additem "rhsusf_mag_15Rnd_9x19_FMJ";
-	player additem "rhsusf_mag_15Rnd_9x19_FMJ";
+	player additem "CUP_15Rnd_9x19_M9";
+	player additem "CUP_15Rnd_9x19_M9";
+	player additem "CUP_15Rnd_9x19_M9";
+	player additem "CUP_15Rnd_9x19_M9";
+	player additem "CUP_15Rnd_9x19_M9";
+	player additem "CUP_15Rnd_9x19_M9";
+	player additem "CUP_15Rnd_9x19_M9";
+	player additem "CUP_15Rnd_9x19_M9";
 	player addweapon "CUP_hgun_BallisticShield_Armed";
 	
 	hint "You have bought a weapon";
@@ -109,14 +109,14 @@ twc_buy_m4 = {
 	};
 	player setvariable ["ttt_money", (_money - _cost), true];
 	player addbackpack "B_AssaultPack_sgg";
-	player additem "rhs_mag_30Rnd_556x45_M855_Stanag";
-	player additem "rhs_mag_30Rnd_556x45_M855_Stanag";
-	player additem "rhs_mag_30Rnd_556x45_M855_Stanag";
-	player additem "rhs_mag_30Rnd_556x45_M855_Stanag";
-	player additem "rhs_mag_30Rnd_556x45_M855_Stanag";
-	player additem "rhs_mag_30Rnd_556x45_M855_Stanag";
-	player additem "rhs_mag_30Rnd_556x45_M855_Stanag";
-	player addweapon "rhs_weap_m4_carryhandle";
+	player additem "30Rnd_556x45_Stanag_Tracer_Red";
+	player additem "30Rnd_556x45_Stanag_Tracer_Red";
+	player additem "30Rnd_556x45_Stanag_Tracer_Red";
+	player additem "30Rnd_556x45_Stanag_Tracer_Red";
+	player additem "30Rnd_556x45_Stanag_Tracer_Red";
+	player additem "30Rnd_556x45_Stanag_Tracer_Red";
+	player additem "30Rnd_556x45_Stanag_Tracer_Red";
+	player addweapon "CUP_arifle_M4A3_Black";
 	
 	hint "You have bought a weapon";
 };
@@ -128,11 +128,11 @@ twc_buy_grenade = {
 		hint ("You need £" + (str _cost) + " for that. You have £" + (str _money));
 	};
 	
-	if (!(player canAdd "rhs_mag_f1")) exitwith {
+	if (!(player canAdd "HandGrenade")) exitwith {
 		hint "You don't have enough inventory space for that right now";
 	};
 	player setvariable ["ttt_money", (_money - _cost), true];
-	player additem "rhs_mag_f1";
+	player additem "HandGrenade";
 	
 	hint "You have bought a weapon";
 };

@@ -6,7 +6,7 @@ disableChannels[]={0,1,2,3,4,6};
 onLoadMission = "http://www.thewreckingcrew.eu/";
 author = "Hobbs [TWC]";
 loadScreen = "twc_ui\insurgency\loading.jpg";
-onLoadName = "Trouble in Terrorist Town"; 
+onLoadName = "Trouble in TWC Town"; 
 
 class Header {
 	gameType   = Coop;
