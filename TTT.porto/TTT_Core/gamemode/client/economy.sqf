@@ -1,3 +1,5 @@
+_checkmoney = ["Economy","Check Bank Balance","",{call _checkbank},{true}] call ace_interact_menu_fnc_createAction;
+[player, 1, ["ACE_SelfActions", "Check Money"], _checkmoney] call ace_interact_menu_fnc_addActionToObject;
 
 _buystuff = ["buy","Buy Kit","",{},{((player getvariable ["twc_tttrole", "none"]) == "tra") || ((player getvariable ["twc_tttrole", "none"]) == "det")}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _buystuff] call ace_interact_menu_fnc_addActionToObject;
@@ -19,6 +21,11 @@ _buystuff = ["gun","M4 (£3)","",{call twc_buy_m4},{true}] call ace_interact_men
 
 _buystuff = ["gun","PKM (£3)","",{call twc_buy_pkm},{true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "buy"], _buystuff] call ace_interact_menu_fnc_addActionToObject;
+
+checkbank = {
+	_money = player getvariable ["seige_money", 1];
+	hint (" You currently have £" + (str _money));
+	};
 
 twc_buy_pkm = {
 	_money = player getvariable ["ttt_money", 1];
